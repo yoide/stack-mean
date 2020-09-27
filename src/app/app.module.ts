@@ -12,6 +12,7 @@ import { HeaderComponent } from './pages/shared/header/header.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { Grafica1Component } from './pages/grafica1/grafica1.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { PagesComponent } from './pages/pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegisterComponent } from './auth/register/register.component';
     HeaderComponent,
     ProgressComponent,
     Grafica1Component,
-    RegisterComponent
+    RegisterComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,
