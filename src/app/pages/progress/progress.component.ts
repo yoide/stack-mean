@@ -1,16 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-progress',
   templateUrl: './progress.component.html',
-  styles: [
+  styleUrls: [ './progress.component.css',
   ]
 })
-export class ProgressComponent implements OnInit {
+export class ProgressComponent {
 
-  constructor() { }
+progress: number = 52;
+progress1: number = 10;
 
-  ngOnInit(): void {
+  get getPorcentaje() {
+    return `${this.progress}%`;
   }
 
+  get getPorcentaje1() {
+    return `${this.progress1}%`;
+  }
+
+
+  chageValue(valor: number){
+    console.log('Heyyy !!!', valor);
+  }
 }
