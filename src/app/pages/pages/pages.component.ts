@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from 'src/app/services/settings.service';
+
+// FUnción javascript que se ejecuta de manera global en archivo asset/js/custom.js.
+declare function customInitFunctions();
 
 @Component({
   selector: 'app-pages',
@@ -7,12 +11,10 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class PagesComponent implements OnInit {
-  public linkTheme = document.querySelector('#theme');
-  constructor() { }
+  constructor(private settingsService: SettingsService) { }
 
   ngOnInit(): void {
-    const storage = localStorage.getItem('theme') || '/assets/css/colors/default-dark.css';
-     this.linkTheme.setAttribute('href', storage);
+    customInitFunctions();
   }
 
 }
